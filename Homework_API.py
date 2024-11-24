@@ -159,3 +159,16 @@ print('lecturer_1 > lecturer_2 ',lecturer_1 > lecturer_2)
 print()
 print('student_1 < student_2 ',student_1 < student_2)
 print('student_1 > student_2 ',student_1 > student_2)
+         
+def avg_rate_x(student, lecturer):
+        sum_ = 0
+        len_ = 0
+        for mark in student.grades.values():
+            sum_ += sum(mark)
+            len_ += len(mark)
+        res = round(sum_ / len_, 1)
+        return res
+
+
+
+print('Средняя оценка за домашнее задание для всех студентов в рамках конкретного курса:', avg_rate_x(student_1, lecturer_2))
